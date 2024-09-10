@@ -156,13 +156,13 @@ export default function CommunitySection() {
             <h3 className="text-2xl font-semibold">{clubHead.name}</h3>
             <p className="bg-gradient-to-b from-[#1FA2FF] via-[#12D8FA] to-[#A6FFCB] text-transparent bg-clip-text font-bold mb-4">{clubHead.title}</p>
             <div className="flex justify-center space-x-4">
-              <a href={clubHead.socials.linkedin} className="text-blue-400 hover:text-blue-300">
+              <a href={clubHead.socials.linkedin} className="text-blue-600 hover:text-blue-300">
                 <FaLinkedin size={24} />
               </a>
-              <a href={clubHead.socials.twitter} className="text-blue-400 hover:text-blue-300">
+              <a href={clubHead.socials.twitter} className="text-blue-900 hover:text-blue-300">
                 <FaGithub size={24} />
               </a>
-              <a href={clubHead.socials.instagram} className="text-pink-400 hover:text-pink-300">
+              <a href={clubHead.socials.instagram} className="text-pink-800 hover:text-pink-300">
                 <FaInstagram size={24} />
               </a>
             </div>
@@ -171,39 +171,36 @@ export default function CommunitySection() {
 
         {/* Coordinators */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mx-20">
-  {coordinators.map((coordinator) => (
-    <div
-      key={coordinator.name}
-      className="flex flex-col border border-black rounded-xl text-center bg-white card-hover"
-    >
-      <div className="px-1 py-10">
-        <Image
-          src={coordinator.image}
-          alt={coordinator.name}
-          width={150}
-          height={150}
-          className="rounded-full mx-auto mb-4"
-        />
-        <h3 className="text-2xl font-semibold">{coordinator.name}</h3>
-        <p className="bg-gradient-to-b from-[#1FA2FF] via-[#12D8FA] to-[#A6FFCB] text-transparent bg-clip-text font-bold mb-4">{coordinator.title}</p>
-        <div className="flex justify-center space-x-4 mt-auto">
-          <a href={coordinator.socials.linkedin} className="text-blue-400 hover:text-blue-300">
-            <FaLinkedin size={26} />
-          </a>
-          <a href={coordinator.socials.twitter} className="text-blue-400 hover:text-blue-300">
-            <FaGithub size={26} />
-          </a>
-          <a href={coordinator.socials.instagram} className="text-pink-400 hover:text-pink-300">
-            <FaInstagram size={26} />
-          </a>
+          {coordinators.map((coordinator) => (
+            <div
+              key={coordinator.name}
+              className="flex flex-col border border-black rounded-xl text-center bg-white card-hover"
+            >
+              <div className="px-1 py-10">
+                <Image
+                  src={coordinator.image}
+                  alt={coordinator.name}
+                  width={150}
+                  height={150}
+                  className="rounded-full mx-auto mb-4"
+                />
+                <h3 className="text-2xl font-semibold">{coordinator.name}</h3>
+                <p className="bg-gradient-to-b from-[#1FA2FF] via-[#12D8FA] to-[#A6FFCB] text-transparent bg-clip-text font-bold mb-4">{coordinator.title}</p>
+                <div className="flex justify-center space-x-4 mt-auto">
+                  <a href={coordinator.socials.linkedin} className="text-blue-600 hover:text-blue-300">
+                    <FaLinkedin size={26} />
+                  </a>
+                  <a href={coordinator.socials.twitter} className="text-blue-900 hover:text-blue-300">
+                    <FaGithub size={26} />
+                  </a>
+                  <a href={coordinator.socials.instagram} className="text-pink-800 hover:text-pink-300">
+                    <FaInstagram size={26} />
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-    </div>
-  ))}
-</div>
-
-
-
       </div>
     </section>
   )

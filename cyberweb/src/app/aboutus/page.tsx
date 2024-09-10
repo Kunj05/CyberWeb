@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../header';
 import TeamSection from './team-section'
 import CommunitySection from './community-section'
-
+import Footer from '../Footer/footer';
 
 const AboutUsPage = () => {
   return (
@@ -13,6 +13,7 @@ const AboutUsPage = () => {
           <CommunitySection/>
         {/* Other content */}
       </div>
+          <Footer/>
     </div>
     
   );
