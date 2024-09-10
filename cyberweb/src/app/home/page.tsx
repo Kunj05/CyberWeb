@@ -79,6 +79,7 @@ export default function Home() {
           Something about event here.          </p>
         </a>
       </div>
+      
     </main>
     </div>
   );
