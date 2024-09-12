@@ -149,28 +149,28 @@ export default function CommunitySection() {
             <Image
               src={clubHead.image}
               alt={clubHead.name}
-              width={200}
-              height={200}
+              width={150}
+              height={150}
               className="rounded-full mb-4"
             />
             <h3 className="text-2xl font-semibold">{clubHead.name}</h3>
-            <p className="bg-gradient-to-b from-[#1FA2FF] via-[#12D8FA] to-[#A6FFCB] text-transparent bg-clip-text font-bold mb-4">{clubHead.title}</p>
+            <p className="bg-gradient-to-b from-[#1FA2FF] via-[#12D8FA] to-[#A6FFCB] text-transparent bg-clip-text text-bold mb-4">{clubHead.title}</p>
             <div className="flex justify-center space-x-4">
-              <a href={clubHead.socials.linkedin} className="text-blue-600 hover:text-blue-300">
-                <FaLinkedin size={24} />
-              </a>
-              <a href={clubHead.socials.twitter} className="text-blue-900 hover:text-blue-300">
-                <FaGithub size={24} />
-              </a>
-              <a href={clubHead.socials.instagram} className="text-pink-800 hover:text-pink-300">
-                <FaInstagram size={24} />
-              </a>
+                  <a href={clubHead.socials.linkedin} className="text-[#36a9f1] hover:-translate-y-1 transition-transform duration-300">
+                    <FaLinkedin size={29} />
+                  </a>
+                  <a href={clubHead.socials.twitter} className="text-[#080808] hover:-translate-y-1 transition-transform duration-300">
+                    <FaGithub size={29} />
+                  </a>
+                  <a href={clubHead.socials.instagram} className="text-[#fa365a] hover:-translate-y-1 transition-transform duration-300">
+                    <FaInstagram size={29} />
+                  </a>
             </div>
           </div>
         </div>
 
         {/* Coordinators */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mx-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mx-20">
           {coordinators.map((coordinator) => (
             <div
               key={coordinator.name}
@@ -187,18 +187,18 @@ export default function CommunitySection() {
                 <h3 className="text-2xl font-semibold">{coordinator.name}</h3>
                 <p className="bg-gradient-to-b from-[#1FA2FF] via-[#12D8FA] to-[#A6FFCB] text-transparent bg-clip-text font-bold mb-4">{coordinator.title}</p>
                 <div className="flex justify-center space-x-4 mt-auto">
-                  <a href={coordinator.socials.linkedin} className="text-blue-600 hover:text-blue-300">
-                    <FaLinkedin size={26} />
+                  <a href={coordinator.socials.linkedin} className="text-[#36a9f1] hover:-translate-y-1 transition-transform duration-300">
+                    <FaLinkedin size={29} />
                   </a>
-                  <a href={coordinator.socials.twitter} className="text-blue-900 hover:text-blue-300">
-                    <FaGithub size={26} />
+                  <a href={coordinator.socials.twitter} className="text-[#080808] hover:-translate-y-1 transition-transform duration-300">
+                    <FaGithub size={29} />
                   </a>
-                  <a href={coordinator.socials.instagram} className="text-pink-800 hover:text-pink-300">
-                    <FaInstagram size={26} />
+                  <a href={coordinator.socials.instagram} className="text-[#fa365a] hover:-translate-y-1 transition-transform duration-300">
+                    <FaInstagram size={29} />
                   </a>
                 </div>
               </div>
-            </div>
+            </div>          
           ))}
         </div>
       </div>

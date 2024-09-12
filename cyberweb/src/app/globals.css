@@ -31,17 +31,10 @@ body {
     text-wrap: balance;
   }
 }
-.card-hover:hover {
-  transform: scaleY(1.05);
-  transition: transform 0.3s ease-in-out;
-}
 
-.card-hover {
-  transform-origin: bottom;
-  transition: transform 0.1s ease-in-out;
-}
 
-.card-hover:hover::before {
-  transform: scaleY(0.95);
-  transition: transform 0.3s ease-in-out;
+/* In your global CSS file */
+.bg-members-blur-dark {
+  background-image: url('../../public/blur.png');
+  background-position: center 5%;
 }

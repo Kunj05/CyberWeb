@@ -33,7 +33,22 @@ export default function TeamSection() {
   }
 
   return (
-    <section className="py-12 bg-white">
+    <section>
+      
+      <div className="relative w-full h-[45vh] pt-12 bg-cover bg-center bg-members-blur-dark">
+        <div className="absolute inset-0 bg-cover bg-center bg-members-blur-dark backdrop-blur-md z-[-1]"></div>
+        <div className="container px-4 md:px-6 text-center space-y-6 relative z-10">
+          <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
+            <span className="text-blue-300">PICT CyerCell</span> Members
+          </h1>
+          <p className="max-w-[600px] mx-auto text-2md md:text-md text-white">
+            The people that make us great :)
+          </p>
+        </div>
+      </div>
+
+      <div className="py-12 bg-white">
+
       <div className="container mx-auto px-4 md:px-8 lg:px-16">
         <h2 className="text-5xl font-bold text-center mb-12">Club Founder</h2>
         {teamMembers.map((member, index) => (
@@ -80,6 +95,9 @@ export default function TeamSection() {
           </div>
         ))}
       </div>
+      </div>
+
+
     </section>
   )
 }

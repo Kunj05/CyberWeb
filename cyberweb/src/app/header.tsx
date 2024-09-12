@@ -1,10 +1,10 @@
 import React from 'react';
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
-      <header className="bg-custom-bg p-4 w-full">
+    <header className="bg-black backdrop-blur-lg p-4 w-full border-b border-gray-200">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <Image
@@ -15,24 +15,26 @@ const Header: React.FC = () => {
           />
         </div>
         <nav>
-          <ul className="flex space-x-9 text-0.5lg font-semibold ">
-            <li className=" hover:bg-gray-300 text-white rounded-full px-4 py-2 cursor-pointer">
+          <ul className="flex space-x-9 font-semibold text-gray-800">
+            <li className="hover:bg-gray-600 text-white rounded-full px-4 py-2 cursor-pointer transition duration-300 ease-in-out">
               <Link href="/home">Home</Link>
             </li>
-            <li className=" hover:bg-gray-300 text-white rounded-full px-4 py-2 cursor-pointer">
+            <li className="hover:bg-gray-600 text-white rounded-full px-4 py-2 cursor-pointer transition duration-300 ease-in-out">
               <Link href="/events">Events</Link>
             </li>
-            <li className=" hover:bg-gray-300 text-white rounded-full px-4 py-2 cursor-pointer">
-              <Link href="/aboutus">Team</Link>
+            <li className="hover:bg-gray-600 text-white rounded-full px-4 py-2 cursor-pointer transition duration-300 ease-in-out">
+              <Link href="/team">Team</Link>
             </li>
-            <li className=" hover:bg-gray-300 text-white rounded-full px-4 py-2 cursor-pointer">
+            <li className="hover:bg-gray-600 text-white rounded-full px-4 py-2 cursor-pointer transition duration-300 ease-in-out">
+              <Link href="/resources">Resources</Link>
+            </li>
+            <li className="hover:bg-gray-600 text-white rounded-full px-4 py-2 cursor-pointer transition duration-300 ease-in-out">
               <Link href="/contactus">Contact Us</Link>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-  
   );
 };
 

@@ -1,7 +1,7 @@
 'use client';
 import Image from "next/image";
 import Header from "../header";
-import Footer from '../Footer/footer';
+import Footer from '../components/footer';
 
 export default function Home() {
   return (
@@ -80,8 +80,6 @@ export default function Home() {
           Something about event here.          </p>
         </a>
       </div>
-
-      
     </main>
     <Footer/>
     </div>
