@@ -1,10 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { BookOpenText } from 'lucide-react';
-import Header from "../header";
 import Link from 'next/link';
-import Footer from '../components/footer';
-
 
 interface Resource {
   id: number;
@@ -105,17 +102,6 @@ const events: Resource[] = [
 export default function EventGrid() {
   return (
     <div className="relative">
-      <Header />
-      {/* Background Image Container */}
-      {/* <div
-        className="absolute inset-0 w-full h-64"
-        style={{
-          backgroundImage: 'url(/blackline.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          zIndex: -1, 
-        }}
-      /> */}
       <div className="relative z-10">
         <div className="container mx-auto px-4 py-10 bg-black">
           <h1 className="text-6xl font-bold mb-12 text-center text-white">Resources</h1>
@@ -155,7 +141,6 @@ export default function EventGrid() {
           </div>
         </div>
         <div className="bg-gray-600 h-[1px] w-full" />
-        <Footer />
       </div>
     </div>
   );
