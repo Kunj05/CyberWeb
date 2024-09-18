@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-black backdrop-blur-lg p-4 w-full border-b border-gray-200">
+    <header className="bg-black backdrop-blur-lg p-4 w-full border-b border-slate-100/50">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <Image

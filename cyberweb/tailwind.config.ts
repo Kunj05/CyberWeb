@@ -16,6 +16,7 @@ const config: Config = {
       colors: {
         'custom-bg': '#000814',
         'blue-200':'#118AB2',
+        
       },
     },
   },

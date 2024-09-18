@@ -1,146 +1,102 @@
-import React from 'react';
-import Image from 'next/image';
-import { BookOpenText } from 'lucide-react';
-import Link from 'next/link';
+"use client";
+import React from "react";
+import Image from "next/image";
+import { PinContainer } from "../../components/ui/3d-pin"; // Adjust the import path as needed
 
 interface Resource {
   id: number;
   title: string;
-  date: string;
-  time: string;
+  description: string;
   imageUrl: string;
-  url: string,
+  url: string;
   tags: string[];
-   // Treat as a string type
 }
 
-const events: Resource[] = [
+const projects: Resource[] = [
   {
     id: 1,
     title: "Introduction to Competitive Programming",
-    date: "5 Sept 2024",
-    time: "05:30 pm",
-    imageUrl: "/Screenshot.png", // Path to the image in the public folder
+    description: "A brief description of the project.",
+    imageUrl: "/Screenshot.png",
     url: "https://example.com/intro-to-competitive-programming",
     tags: ["Programming", "Beginner"],
   },
   {
-    id: 2,
-    title: "ML League 2024 - Introduction to CNNs",
-    date: "31 Aug 2024",
-    time: "12:00 am",
-    imageUrl: "/Screenshot.png", // Path to the image in the public folder
-    url: "https://example.com/ml-league-2024",
-    tags: ["Programming", "Beginner"],
-  },
-,
-  {
-    id: 3,
+    id: 1,
     title: "Introduction to Competitive Programming",
-    date: "5 Sept 2024",
-    time: "05:30 pm",
-    imageUrl: "/Screenshot.png", // Use the same image URL
+    description: "A brief description of the project.",
+    imageUrl: "/Screenshot.png",
     url: "https://example.com/intro-to-competitive-programming",
     tags: ["Programming", "Beginner"],
   },
   {
-    id: 4,
+    id: 1,
     title: "Introduction to Competitive Programming",
-    date: "5 Sept 2024",
-    time: "05:30 pm",
-    imageUrl: "/Screenshot.png", // Use the same image URL
+    description: "A brief description of the project.",
+    imageUrl: "/Screenshot.png",
     url: "https://example.com/intro-to-competitive-programming",
     tags: ["Programming", "Beginner"],
   },
   {
-    id: 5,
+    id: 1,
     title: "Introduction to Competitive Programming",
-    date: "5 Sept 2024",
-    time: "05:30 pm",
-    imageUrl: "/Screenshot.png", // Use the same image URL
+    description: "A brief description of the project.",
+    imageUrl: "/Screenshot.png",
     url: "https://example.com/intro-to-competitive-programming",
     tags: ["Programming", "Beginner"],
   },
-  {
-    id: 6,
-    title: "Introduction to Competitive Programming",
-    date: "5 Sept 2024",
-    time: "05:30 pm",
-    imageUrl: "/Screenshot.png", // Use the same image URL
-    url: "https://example.com/intro-to-competitive-programming",
-    tags: ["Programming", "Beginner"],
-  },
-  {
-    id: 7,
-    title: "Introduction to Competitive Programming",
-    date: "5 Sept 2024",
-    time: "05:30 pm",
-    imageUrl: "/Screenshot.png", // Use the same image URL
-    url: "https://example.com/intro-to-competitive-programming",
-    tags: ["Programming", "Beginner"],
-  },
-  {
-    id: 8,
-    title: "Introduction to Competitive Programming",
-    date: "5 Sept 2024",
-    time: "05:30 pm",
-    imageUrl: "/Screenshot.png", // Use the same image URL
-    url: "https://example.com/intro-to-competitive-programming",
-    tags: ["Programming", "Beginner"],
-  },
-  {
-    id: 9,
-    title: "Introduction to Competitive Programming",
-    date: "5 Sept 2024",
-    time: "05:30 pm",
-    imageUrl: "/Screenshot.png", // Use the same image URL
-    url: "https://example.com/intro-to-competitive-programming",
-    tags: ["Programming", "Beginner"],
-  },
-] as Resource[];
+];
 
 export default function EventGrid() {
   return (
-    <div className="relative">
-      <div className="relative z-10">
-        <div className="container mx-auto px-4 py-10 bg-black">
-          <h1 className="text-6xl font-bold mb-12 text-center text-white">Resources</h1>
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
-              {events.map((event) => (
-                <a
-                  href={event.url}
-                  key={event.id}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-gray-800 rounded-lg shadow-md overflow-hidden h-[340px] transform transition-transform duration-300 ease-in-out hover:-translate-y-4 cursor-pointer"
+    <div className="py-10 bg-black text-white">
+      <h1 className="text-6xl font-bold mb-1 text-center text-white">
+        Resources
+      </h1>
+      <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 ">
+        {projects.map(({ id, title, description, imageUrl, url, tags }) => (
+          <div
+            className="sm:h-[55rem] h-[46rem] lg:min-h-[50rem] flex items-center justify-center sm:w-[570px] w-[80vw] " // Added margin-bottom
+            key={id}
+          >
+            <PinContainer title={url} href={url}>
+              <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[35vh]">
+                <div
+                  className="relative w-full h-full overflow-hidden lg:rounded-3xl"
+                  style={{ backgroundColor: '#13162D' }}
                 >
-                  <Image
-                    src={event.imageUrl}
-                    alt={event.title}
-                    width={400}
-                    height={350}
-                    className="w-full h-44 object-cover"
+                  <Image 
+                    src={imageUrl} 
+                    alt={title}  
+                    layout="fill" 
+                    objectFit="cover" 
+                    className="absolute z-10"
                   />
-                  <div className="p-6">
-                    <div className='flex gap-6 items-center'>
-                      <BookOpenText className="w-10 h-10 text-white" />
-                      <h2 className="text-xl font-semibold text-white">{event.title}</h2>
-                    </div>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {event.tags.map((tag, index) => (
-                        <span key={index} className="bg-blue-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </a>
-              ))}
-            </div>
+                </div>
+              </div>
+              <h1 className="font-bold lg:text-4xl md:text-4xl text-3xl mt-5">
+                {title}
+              </h1>
+
+              <p
+                className="lg:text-xl lg:font-normal font-light text-xs"
+                style={{
+                  color: '#BEC1DD',
+                  margin: '1vh 0',
+                }}
+              >
+                {description}
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {tags.map((tag, index) => (
+                  <span key={index} className="bg-blue-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </PinContainer>
           </div>
-        </div>
-        <div className="bg-gray-600 h-[1px] w-full" />
+        ))}
       </div>
     </div>
   );
