@@ -1,30 +1,32 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaLinkedin, FaTwitter, FaInstagram, FaGithub } from 'react-icons/fa';
+import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-10">
-      <div className="container mx-auto px-4">
-        <div className="h-px bg-slate-100/50 mb-12 w-full"></div>
+    <footer >
+      <BackgroundBeamsWithCollision className="min-h-52 h-auto md:h-auto bg-gradient-to-b from-neutral-800 to-black  text-white py-10">
+      <div className="container mx-auto px-4 w-3/4">
+        {/* <div className="h-px bg-slate-100/50 mb-12 w-full"></div> */}
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-items-center">
           {/* Contact Us Section */}
-          <div className="flex flex-col items-center md:items-start">
-            <div className="mb-4">
+          <div className="flex flex-col items-center justify-items-center ">
+            <div className="flex flex-row mb-4 items-center">
               <Image
                 src="/logo.png"
                 alt="Website Logo"
-                width={90}
-                height={90}
-                className="rounded-full" // Making the logo circular
+                width={70}
+                height={70}
+                className="rounded-full md:h-5rem md:w-5rem" // Making the logo circular
               />
+              <div className="text-center md:text-left m-4">
+                A group of passionate PICT students are helping the community of PICT.
+              </div>
             </div>
-            <p className="text-center md:text-left mb-4">
-              A group of passionate PICT students are helping the community of PICT.
-            </p>
-
-            <div className="flex space-x-4">
+            <hr className='w-10/12 2xl:w-full border-gray-400'/>
+            <div className="flex space-x-4 mt-4">
               <Link
                 href="https://www.linkedin.com/in/pictcybercell/"
                 aria-label="LinkedIn"
@@ -96,7 +98,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Us Form Section */}
-          <div className="flex flex-col items-center md:items-start">
+          {/* <div className="flex flex-col items-center md:items-start">
             <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-300 mb-4">
               CONTACT US
             </h2>
@@ -127,9 +129,10 @@ export default function Footer() {
                 SUBMIT
               </button>
             </form>
-          </div>
+          </div> */}
         </div>
       </div>
+      </BackgroundBeamsWithCollision>
     </footer>
   );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image'; // Import Image from Next.js
+import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 
 export default function CyberHUBLanding() {
   return (
@@ -7,12 +8,13 @@ export default function CyberHUBLanding() {
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between">
         <div className="lg:w-1/2 mb-8 lg:mb-0">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-center bg-clip-text bg-gradient-to-r from-blue-900 via-blue-400 to-blue-900 text-transparent animate-fade-in animate-pulse">
+        {/* <TextHoverEffect text="Inspiring the Next Wave of Cybersecurity Leaders" /> */}
         Inspiring the Next Wave of Cybersecurity Leaders
     </h1>
     
     
           <p className="text-xl mb-6">
-           Welcome to the PICT Cybercell Club, the ultimate destination for cybersecurity enthusiasts.
+            Welcome to the PICT Cybercell Club, the ultimate destination for cybersecurity enthusiasts.
           </p>
           <h2 className="text-2xl font-semibold mb-4">About Us:</h2>
           <ul className="space-y-3">
