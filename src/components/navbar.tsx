@@ -10,11 +10,11 @@ const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="relative bg-black backdrop-blur-lg p-4 w-full border-b border-gray-200">
+    <header className="relative bg-black backdrop-blur-lg p-3 w-full border-b border-gray-200">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center">
-          <div className="relative w-20 h-20 rounded-full overflow-hidden">
+
+          <div className="relative w-20 h-20 rounded-full overflow-hidden flex items-center justify-center">
             <Image
               src="/logo.png"
               alt="Website Logo"
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
               className="rounded-full"
             />
           </div>
-        </div>
+
 
         {/* Mobile Menu Button */}
         <button 
