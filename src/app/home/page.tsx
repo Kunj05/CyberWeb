@@ -7,10 +7,10 @@ import EventsCarousel from "@/components/home_comp/event"
 
 
 const AboutPage: React.FC = () => {
-  // console.log(window);
   return (
     <div>
       <Earth />
+      {/* <World data={sampleArcs} globeConfig={globeConfig} />; */}
       <div>
         <CyberHUBLanding/>
         <div className=" bg-white pb-20"><WebClubUI/></div>
