@@ -12,19 +12,19 @@ export default function TeamSection() {
   const teamMembers: TeamMember[] = [
     {
       name: "Rushi Balapure",
-      position: "",
+      position: "Founder",
       image: "/logo.png",
       details: "Dr. Chandak is a renowned expert in artificial intelligence and machine learning. With over 15 years of experience in both academia and industry, she leads our computer science department with a focus on cutting-edge research and innovative teaching methods."
     },
     {
       name: "Riddhi Kulkarni",
-      position: "",
+      position: "Co-Founder",
       image: "/logo.png",
       details: "Prof. Johnson is an award-winning engineer with multiple patents. He brings real-world experience to our engineering programs, emphasizing practical skills alongside theoretical knowledge."
     },
     {
       name: "Kaushik",
-      position: "",
+      position: "Technical Advisor",
       image: "/logo.png",
       details: "Dr. Chen is dedicated to enhancing student life on campus. With a background in psychology, she implements innovative programs to support student well-being and academic success."
     }
@@ -58,46 +58,23 @@ export default function TeamSection() {
         <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <h2 className="text-4xl font-bold text-center mb-8 text-gray-800 animate-fade-in">Club Founder</h2>
           {teamMembers.map((member, index) => (
-            <div key={member.name} className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-12 last:mb-0 mx-4 md:mx-8 lg:mx-16">
-              {index % 2 === 0 ? (
-                <>
-                  <div className="w-full md:w-1/3 flex justify-center md:justify-start">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      width={200} 
-                      height={200} 
-                      className="rounded-full shadow-lg"
-                    />
-                  </div>
-                  <div className="w-full md:w-2/3">
-                    <h3 className="text-2xl font-semibold mb-1 text-gray-900 animate-fade-in">
-                      {highlightInitials(member.name)}
-                    </h3>
-                    <p className="text-gray-600 mb-2">{member.position}</p>
-                    <p className="text-gray-700">{member.details}</p>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="w-full md:w-2/3 order-2 md:order-1">
-                    <h3 className="text-2xl font-semibold mb-1 text-gray-900 animate-fade-in">
-                      {highlightInitials(member.name)}
-                    </h3>
-                    <p className="text-gray-600 mb-2">{member.position}</p>
-                    <p className="text-gray-700">{member.details}</p>
-                  </div>
-                  <div className="w-full md:w-1/3 flex justify-center md:justify-end order-1 md:order-2">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      width={200} 
-                      height={200} 
-                      className="rounded-full shadow-lg"
-                    />
-                  </div>
-                </>
-              )}
+            <div key={member.name} className="flex flex-col md:flex-row items-center gap-4 mb-8 mx-auto max-w-xl md:max-w-full">
+              <div className="w-full flex justify-center mb-4 md:mb-0">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  width={200} 
+                  height={200} 
+                  className="rounded-full shadow-lg"
+                />
+              </div>
+              <div className="w-full md:w-2/3">
+                <h3 className="text-2xl font-semibold mb-1 text-gray-900 animate-fade-in">
+                  {highlightInitials(member.name)}
+                </h3>
+                <p className="text-gray-600 mb-2">{member.position}</p>
+                <p className="text-gray-700">{member.details}</p>
+              </div>
             </div>
           ))}
         </div>
