@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaLinkedin, FaTwitter, FaInstagram, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 
 export default function CommunitySection() {
   const clubHead = {
@@ -26,7 +26,7 @@ export default function CommunitySection() {
     },
     {
       name: "Pranav Deshpande",
-      title: "Secretory",
+      title: "Secretary",
       image: "/pranav.png",
       socials: {
         linkedin: "#",
@@ -97,36 +97,34 @@ export default function CommunitySection() {
   ];
 
   return (
-    <section className="py-16 ">
-      <div className="container mx-auto px-1">
+    <section className="py-16">
+      <div className="container mx-auto px-4">
         <h2 className="text-5xl font-bold text-center mb-10 bg-clip-text bg-gradient-to-r from-blue-500 to-blue-300 text-transparent animate-fade-in">
           MEET OUR COUNCIL MEMBERS
         </h2>
 
         {/* Club Head */}
-        <div className="flex justify-center">
-          <div
-            className="flex flex-col border border-transparent rounded-xl text-center bg-white shadow-lg transition-transform transform hover:-translate-y-2"
-          >
-            <div className="px-1 py-10">
+        <div className="flex justify-center mb-12 p-3">
+          <div className="flex flex-col border border-transparent rounded-xl text-center bg-white shadow-lg transition-transform transform hover:-translate-y-2 w-full max-w-xs mx-2">
+            <div className="p-1"> 
               <Image
                 src={clubHead.image}
                 alt={clubHead.name}
-                width={300}
-                height={300}
+                width={250} 
+                height={250} 
                 className="rounded-full mx-auto mb-4 border-4 border-[#1FA2FF]"
               />
-              <h3 className="text-3xl font-semibold text-gray-800">{clubHead.name}</h3>
-              <p className="bg-gradient-to-b from-[#1FA2FF] via-[#12D8FA] to-[#A6FFCB] text-transparent bg-clip-text font-bold mb-2 text-xl">{clubHead.title}</p>
-              <div className="flex justify-center space-x-4 mt-auto">
+              <h3 className="text-2xl font-semibold text-gray-800">{clubHead.name}</h3>
+              <p className="bg-gradient-to-b from-[#1FA2FF] via-[#12D8FA] to-[#A6FFCB] text-transparent bg-clip-text font-bold mb-2 text-lg">{clubHead.title}</p>
+              <div className="flex justify-center space-x-4 mt-3">
                 <a href={clubHead.socials.linkedin} className="text-[#36a9f1] hover:-translate-y-1 transition-transform duration-300">
-                  <FaLinkedin size={29} />
+                  <FaLinkedin size={28} />
                 </a>
                 <a href={clubHead.socials.twitter} className="text-[#080808] hover:-translate-y-1 transition-transform duration-300">
-                  <FaGithub size={29} />
+                  <FaGithub size={28} />
                 </a>
                 <a href={clubHead.socials.instagram} className="text-[#fa365a] hover:-translate-y-1 transition-transform duration-300">
-                  <FaInstagram size={29} />
+                  <FaInstagram size={28} />
                 </a>
               </div>
             </div>
@@ -134,31 +132,31 @@ export default function CommunitySection() {
         </div>
 
         {/* Coordinators */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-7 md:mx-20 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-6 gap-x-2 mx-auto">
           {coordinators.map((member) => (
             <div
               key={member.name}
-              className="flex flex-col border border-transparent rounded-xl text-center bg-white shadow-lg transition-transform transform hover:-translate-y-2"
+              className="flex flex-col border border-transparent rounded-xl text-center bg-white shadow-lg transition-transform transform hover:-translate-y-2 w-full max-w-xs mx-2 mb-4"
             >
-              <div className="px-1 py-10">
+              <div className="p-2">
                 <Image
                   src={member.image}
                   alt={member.name}
-                  width={300}
-                  height={300}
+                  width={250}
+                  height={250}
                   className="rounded-full mx-auto mb-4 border-4 border-[#1FA2FF]"
                 />
-                <h3 className="text-3xl font-semibold text-gray-800">{member.name}</h3>
-                <p className="bg-gradient-to-b from-[#1FA2FF] via-[#12D8FA] to-[#A6FFCB] text-transparent bg-clip-text font-bold mb-2 text-xl">{member.title}</p>
-                <div className="flex justify-center space-x-4 mt-auto">
+                <h3 className="text-2xl font-semibold text-gray-800">{member.name}</h3>
+                <p className="bg-gradient-to-b from-[#1FA2FF] via-[#12D8FA] to-[#A6FFCB] text-transparent bg-clip-text font-bold mb-2 text-lg">{member.title}</p>
+                <div className="flex justify-center space-x-4 mt-3">
                   <a href={member.socials.linkedin} className="text-[#36a9f1] hover:-translate-y-1 transition-transform duration-300">
-                    <FaLinkedin size={29} />
+                    <FaLinkedin size={28} />
                   </a>
                   <a href={member.socials.twitter} className="text-[#080808] hover:-translate-y-1 transition-transform duration-300">
-                    <FaGithub size={29} />
+                    <FaGithub size={28} />
                   </a>
                   <a href={member.socials.instagram} className="text-[#fa365a] hover:-translate-y-1 transition-transform duration-300">
-                    <FaInstagram size={29} />
+                    <FaInstagram size={28} />
                   </a>
                 </div>
               </div>

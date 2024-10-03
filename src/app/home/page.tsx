@@ -14,8 +14,8 @@ const AboutPage: React.FC = () => {
       <div>
         <CyberHUBLanding/>
         <div className=" bg-white pb-20"><WebClubUI/></div>
-        <div ><NumbersThatMatter/></div>
         <EventsCarousel/>
+        <div ><NumbersThatMatter/></div>
       </div>
     </div>
   );
