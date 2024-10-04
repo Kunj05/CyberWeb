@@ -97,7 +97,7 @@ export default function CommunitySection() {
   ];
 
   return (
-    <section className="py-16">
+    <section className="py-16 ">
       <div className="container mx-auto px-4">
         <h2 className="text-5xl font-bold text-center mb-10 bg-clip-text bg-gradient-to-r from-blue-500 to-blue-300 text-transparent animate-fade-in">
           MEET OUR COUNCIL MEMBERS

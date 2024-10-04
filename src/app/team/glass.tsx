@@ -39,7 +39,8 @@ const cardsData = [
 
 export default function GlassmorphismCards() {
   return (
-    <section className="py-16 bg-black">
+    <section className="py-16  bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
+      
       <div className="container mx-auto px-4">
         <h2 className="text-5xl font-bold text-center mb-10 bg-clip-text bg-gradient-to-r from-blue-500 to-blue-300 text-transparent animate-fade-in">
           Club Founder
@@ -47,7 +48,7 @@ export default function GlassmorphismCards() {
         {cardsData.map((card, index) => (
           <div
             key={index}
-            className={`flex flex-col md:flex-row items-center bg-white bg-opacity-20 backdrop-blur-[7px] border border-gray-200 rounded-[25px] shadow-lg p-6 mb-8 transition-transform duration-300 w-full md:w-[65%] mx-auto ${
+            className={`flex flex-col md:flex-row items-cente bg-opacity-20 backdrop-blur-[7px] border border-black rounded-[25px] shadow-lg p-6 mb-8 transition-transform duration-300 w-full md:w-[65%] mx-auto ${
               index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
             }`}
           >
@@ -67,8 +68,8 @@ export default function GlassmorphismCards() {
               <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 mb-1">
                 {card.name}
               </h3>
-              <p className="text-lg font-medium text-white mb-2 italic">{card.position}</p>
-              <p className="text-white">{card.description}</p>
+              <p className="text-lg font-medium text-black mb-2 italic">{card.position}</p>
+              <p className="text-black">{card.description}</p>
 
               {/* Social Icons */}
               <div className="flex space-x-4 mt-4">
