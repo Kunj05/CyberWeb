@@ -3,9 +3,9 @@ import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 
 const cardsData = [
   {
-    name: "John Doe",
+    name: "Rushi Balapure",
     position: "Software Engineer",
-    description: "A passionate developer with expertiseexperienced designer focused on creating intuitive user experienced designer focused on creating intuitive user experienced designer focused on creating intuitive user in web technologies.",
+    description: "A passionate developer focused A passionate developer focused A passionate developer focused A passionate developer focused  on creating intuitive user experiences in web technologies.",
     image: "/sunny.png", // Replace with your image paths
     socials: {
       linkedin: "https://linkedin.com/in/johndoe",
@@ -14,9 +14,9 @@ const cardsData = [
     },
   },
   {
-    name: "Jane Smith",
+    name: "Riddhi Kulkarni",
     position: "UI/UX Designer",
-    description: "An experienced designer focused on creating intuitive us experienced designer focused on creating intuitive user experienced designer focused on creating intuitive user er interfaces.",
+    description: "An experienced designer focused on creating A passionate developer focused A passionate developer focused A passionate developer focused intuitive user interfaces.",
     image: "/sunny.png",
     socials: {
       linkedin: "https://linkedin.com/in/janesmith",
@@ -25,9 +25,9 @@ const cardsData = [
     },
   },
   {
-    name: "Michael Johnson",
+    name: "Kaushik",
     position: "Project Manager",
-    description: "A project manager experienced designer focused on creating intuitive user experienced designer focused on creating intuitive user experienced designer focused on creating intuitive user  ensuring timely delivery and effective communication.",
+    description: "A project manager A passionate developer focused A passionate developer focused A passionate developer focused ensuring timely delivery and effective communication.",
     image: "/sunny.png",
     socials: {
       linkedin: "https://linkedin.com/in/michaeljohnson",
@@ -39,27 +39,26 @@ const cardsData = [
 
 export default function GlassmorphismCards() {
   return (
-    <section className="py-16  bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
-      
+    <section className="py-16 bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
       <div className="container mx-auto px-4">
         <h2 className="text-5xl font-bold text-center mb-10 bg-clip-text bg-gradient-to-r from-blue-500 to-blue-300 text-transparent animate-fade-in">
           Club Founder
-        </h2>        
+        </h2>
         {cardsData.map((card, index) => (
           <div
             key={index}
-            className={`flex flex-col md:flex-row items-cente bg-opacity-20 backdrop-blur-[7px] border border-black rounded-[25px] shadow-lg p-6 mb-8 transition-transform duration-300 w-full md:w-[65%] mx-auto ${
-              index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+            className={`flex flex-col md:flex-row items-center bg-white border border-black rounded-[25px] shadow-lg p-2 mb-8 transition-transform duration-300 w-full md:w-[65%] mx-auto ${
+              index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row-reverse'
             }`}
           >
             {/* Left Side: Image */}
-            <div className="flex-1 p-2" style={{ flex: '0 0 35%' }}>
+            <div className="flex-1 p-2 pr-2" style={{ flex: '0 0 35%' }}>
               <Image
                 src={card.image}
                 alt={card.name}
-                width={250} // Adjust size as needed
-                height={250} // Adjust size as needed
-                className="rounded-full w-full h-auto" // Make the image circular and responsive
+                width={260} // Adjusted size for smaller image
+                height={260} // Adjusted size for smaller image
+                className="rounded-full md:w-[180px] md:h-[180px] lg:w-[250px] lg:h-[250px] w-full h-auto" // Make the image circular and responsive
               />
             </div>
 
