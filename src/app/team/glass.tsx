@@ -56,9 +56,9 @@ export default function GlassmorphismCards() {
               <Image
                 src={card.image}
                 alt={card.name}
-                width={260} // Adjusted size for smaller image
-                height={260} // Adjusted size for smaller image
-                className="rounded-full md:w-[180px] md:h-[180px] lg:w-[250px] lg:h-[250px] w-full h-auto" // Make the image circular and responsive
+                width={260} 
+                height={260} 
+                className="rounded-full md:w-[180px] md:h-[180px] lg:w-[250px] lg:h-[250px] w-full h-auto" 
               />
             </div>
 
