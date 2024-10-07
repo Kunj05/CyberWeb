@@ -120,7 +120,7 @@ export default function CommunitySection() {
               />
               <h3 className="text-2xl font-semibold text-gray-800">{clubHead.name}</h3>
               <p className="bg-gradient-to-b from-[#1FA2FF] via-[#12D8FA] to-[#A6FFCB] text-transparent bg-clip-text font-bold mb-2 text-lg">{clubHead.title}</p>
-              <div className="flex justify-center space-x-4 mt-3">
+              <div className="flex justify-center space-x-4 mt-1">
                 <a href={clubHead.socials.linkedin} className="text-[#36a9f1] ">
                   <FaLinkedin size={28} />
                 </a>
@@ -152,7 +152,7 @@ export default function CommunitySection() {
                 />
                 <h3 className="text-2xl font-semibold text-gray-800">{member.name}</h3>
                 <p className="bg-gradient-to-b from-[#1FA2FF] via-[#12D8FA] to-[#A6FFCB] text-transparent bg-clip-text font-bold mb-2 text-lg">{member.title}</p>
-                <div className="flex justify-center space-x-4 mt-3">
+                <div className="flex justify-center space-x-4 mt-1">
                   <a href={member.socials.linkedin} className="text-[#36a9f1] ">
                     <FaLinkedin size={28} />
                   </a>
