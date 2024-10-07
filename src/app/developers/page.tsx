@@ -8,7 +8,7 @@ export default function DeveloperSection() {
       image: "/pranav.png",
       socials: {
         linkedin: "#",
-        twitter: "#",
+        github: "#",
         instagram: "#"
       }
     },
@@ -17,7 +17,7 @@ export default function DeveloperSection() {
       image: "/kunj.png",
       socials: {
         linkedin: "#",
-        twitter: "#",
+        github: "#",
         instagram: "#"
       }
     },
@@ -26,7 +26,7 @@ export default function DeveloperSection() {
       image: "/Jagdish.png",
       socials: {
         linkedin: "#",
-        twitter: "#",
+        github: "#",
         instagram: "#"
       }
     },
@@ -59,7 +59,7 @@ export default function DeveloperSection() {
                   <a href={member.socials.linkedin} className="text-[#36a9f1] ">
                     <FaLinkedin size={28} />
                   </a>
-                  <a href={member.socials.twitter} className="text-[#080808] ">
+                  <a href={member.socials.github} className="text-[#080808] ">
                     <FaGithub size={28} />
                   </a>
                   <a href={member.socials.instagram} className="text-[#fa365a] ">
