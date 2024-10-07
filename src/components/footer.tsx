@@ -98,7 +98,7 @@ export default function Footer() {
 
           <div className=" mt-2 text-gray-400">
             <p className="text-sm">
-              © 2024 PICT CyberCell. Made with ❤️ for <Link href="/developers" className="text-blue-400 hover:underline">Developers</Link>.
+              © 2024 PICT CyberCell. Made with ❤️ by <Link href="/developers" className="text-blue-400 hover:underline">PICT CyberCell Web Developers</Link>.
             </p>
           </div>
         </div>
