@@ -55,7 +55,7 @@ export default function DeveloperSection() {
                   className="rounded-full mx-auto mb-4 border-4 border-[#1FA2FF]"
                 />
                 <h3 className="text-2xl font-semibold text-gray-800">{member.name}</h3>
-                <div className="flex justify-center space-x-4 mt-3">
+                <div className="flex justify-center space-x-4 mt-1">
                   <a href={member.socials.linkedin} className="text-[#36a9f1] ">
                     <FaLinkedin size={28} />
                   </a>
