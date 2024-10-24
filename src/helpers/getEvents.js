@@ -64,7 +64,8 @@ export async function getEvents() {
               }
             }]
           },
-          "slider_images": ["", 0]
+          "slider_images": ["", 0],
+          status: "upcoming" 
         }
       },
         {
@@ -91,7 +92,8 @@ export async function getEvents() {
               }
             }]
           },
-          "slider_images": ["event_dao", 6]
+          "slider_images": ["event_dao", 6],
+          status: "upcoming" 
         }
       },
     {
@@ -118,7 +120,8 @@ export async function getEvents() {
             }
           }]
         },
-        "slider_images": ["event_ctf", 11]
+        "slider_images": ["event_ctf", 11],
+        status: "past" 
       }
     },
     {
@@ -145,7 +148,8 @@ export async function getEvents() {
             }
           }]
         },
-        "slider_images": ["event_webclass", 6]
+        "slider_images": ["event_webclass", 6],
+        status: "past" 
       }
     }
   ]

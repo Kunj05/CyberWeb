@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaLinkedin, FaTwitter, FaInstagram, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 
 export default function Footer() {
@@ -49,9 +50,9 @@ export default function Footer() {
                 <Link
                   href="#"
                   aria-label="Twitter"
-                  className="text-[#1da1f2] hover:-translate-y-1 transition-transform duration-300"
+                  className="text-[#000000] hover:-translate-y-1 transition-transform duration-300"
                 >
-                  <FaTwitter size={28} />
+                  <FaXTwitter size={28} />
                 </Link>
               </div>
             </div>
