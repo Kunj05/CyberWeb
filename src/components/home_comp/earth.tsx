@@ -408,7 +408,7 @@ const Earth: React.FC = () => {
 
   return (
     <div className  ="relative flex flex-col items-center justify-center h-[40rem] bg-black overflow-hidden pb-20">
-      <World data={sampleArcs} globeConfig={globeConfig} />;
+      <World data={sampleArcs} globeConfig={globeConfig} />
       <SparklesCore
         id="tsparticlesfullpage"
         background="transparent"
